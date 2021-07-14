@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  /* width:60%; */
+  /* padding: 40px; */
+  /* margin:40px; */
+  /* border: 1px solid black; */
+}
+
+.PicDiv {
+  text-align: center;
+  /* width:60%; */
+  /* padding: 40px; */
+  margin:40px;
+  /* border: 1px solid black; */
 }
 
 .App-logo {
@@ -35,4 +47,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  font-size: 40px;
 }
