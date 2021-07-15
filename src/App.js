@@ -1,39 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import axios from 'axios'
 import Header from './components/Header'
 import Photo from './components/Photo'
-import Social from './components/Social'
+import styled from 'styled-components'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCalendar } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCalendar)
+
+const Wrapper = styled.section`
+  display: flex;
+  justify-content: center;
+`
 
 function App() {
 
-  const [pic, setPic] = useState([])
-
-  // useEffect(() => {
-  //   axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2021-07-12`)
-  //     .then(res => {
-  //       setPic(res.data)
-  //     })
-  //     .catch(err => console.log(err))
-  //     //we would need to reload to see new data, not new
-  // }, [])
-  
   return (
-    <div className="App">
-      <div>
-      <Header />
-      </div>
-      <div className='PicDiv'>
-      <Photo pic={pic} />
-      <Social /> 
-      </div>
+<div className="App">
+    <Header />
+    <Wrapper>
+    <Photo />
+    </Wrapper>
+    <div> 
     </div>
+</div>
 
   );
-
-  
-
-
 }
 
 export default App;
